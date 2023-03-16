@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>thuật toán rsa nhóm 6</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="console">
+            <div class="ctn-btn" onclick="home(0)">
+                <div class="btn-console btn-active" onclick="console_active(0)">
+                    <i class="fas fa-key"></i>
+                    <p class="text-console">tạo khóa</p>
+                </div>
+                <div class="after after-active"></div>
+            </div>
+            <div class="ctn-btn" onclick="home(1)">
+                <div class="btn-console" onclick="console_active(1)">
+                    <i class="fas fa-user-lock"></i>
+                    <p class="text-console">mã hóa(người gửi)</p>
+                </div>
+                <div class="after"></div>
+            </div>
+            <div class="ctn-btn" onclick="home(2)">
+                <div class="btn-console" onclick="console_active(2)">
+                    <i class="fad fa-user-check"></i>
+                    <p class="text-console">giải mã(người nhận)</p>
+                </div>
+                <div class="after"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header">
+                <label>Kích thước:</label>
+                <div class="">
+                    <select class="form-select keySize" id="inputGroupSelect04"
+                        aria-label="Example select with button addon">
+                        <option value="512">512</option>
+                        <option value="1024">1024</option>
+                        <option value="2048">2048</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content">
+                <div class="item" onclick="copyText('outputPrivateKey')">
+                    <div class="icon">
+                        <i class="fal fa-key"></i>
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <div class="item-text">
+                        <b class="text-inline">Private Key:</b>
+                        <p id="outputPrivateKey"></p>
+                    </div>
+                </div>
+                <div class="item" onclick="copyText('outputPublicKey')">
+                    <div class="icon">
+                        <i class="fal fa-key"></i>
+                    </div>
+                    <div class="item-text">
+                        <b class="text-inline">Public Key:</b>
+                        <p id="outputPublicKey"></p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn-1" onclick="key()">Tạo key</button>
+            
+            
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.4.0/jsrsasign-all-min.js"></script>
+<script src="../source/main.js"></script>
+<script src="../source/basic.js"></script>
+
+</html>

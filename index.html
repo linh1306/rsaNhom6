@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Chữ kí số sử dụng RSA nhóm 6 D20</title>
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(41, 41, 49);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 50px;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d17dbe, #6b7edc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 100px;
+        }
+
+        .text {
+            color: #999;
+            font-size: 36px;
+            font-weight: bold;
+            position: relative;
+            margin-left: 30px;
+        }
+
+        #flip {
+            height: 50px;
+            overflow: hidden;
+        }
+
+        #flip>div>div {
+            color: #fff;
+            padding: 4px 0px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: inline-block;
+        }
+
+        #flip div:first-child {
+            animation: show 7s linear infinite;
+        }
+
+        .text-1 {
+            font-size: 20px;
+            margin: 20px 0px;
+        }
+
+        .btn {
+            width: 120px;
+            height: 40px;
+            background-color: #d17dbe;
+            border: none;
+            border-radius: 20px;
+            text-align: start;
+            padding-left: 23px;
+            cursor: pointer;
+        }
+
+        .btn i {
+            padding-left: 10px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px #d17dbe;
+        }
+
+        .btn:hover i {
+            padding-left: 15px;
+        }
+
+        @keyframes show {
+            0% {
+                margin-top: -270px;
+            }
+
+            5% {
+                margin-top: -180px;
+            }
+
+            33% {
+                margin-top: -180px;
+            }
+
+            38% {
+                margin-top: -90px;
+            }
+
+            66% {
+                margin-top: -90px;
+            }
+
+            71% {
+                margin-top: 0px;
+            }
+
+            99.99% {
+                margin-top: 0px;
+            }
+
+            100% {
+                margin-top: -270px;
+            }
+        }
+        @keyframes spin3D {
+            from {
+                transform: rotate3d(.5, .5, .5, 360deg);
+            }
+
+            to {
+                transform: rotate3d(0deg);
+            }
+        }
+
+        .spinner-box {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin-left: 80px;
+        }
+
+        .leo {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .blue-orbit {
+            width: 165px;
+            height: 165px;
+            border: 1px solid #46b2e8a5;
+            -webkit-animation: spin3D 3s linear .2s infinite;
+        }
+
+        .green-orbit {
+            width: 210px;
+            height: 210px;
+            border: 2px solid #3fbe74a5;
+            -webkit-animation: spin3D 2s linear 0s infinite;
+        }
+
+        .red-orbit {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #e9340ba5;
+            -webkit-animation: spin3D 1s linear 0s infinite;
+        }
+
+        .white-orbit {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ffffff;
+            -webkit-animation: spin3D 10s linear 0s infinite;
+        }
+
+        .w1 {
+            transform: rotate3D(1, 1, 1, 90deg);
+        }
+
+        .w2 {
+            transform: rotate3D(1, 2, .5, 90deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>Nhóm 6</h1>
+            <div id="flip">
+                <div>
+                    <div>mã hóa văn bản</div>
+                </div>
+                <div>
+                    <div>mã hóa file</div>
+                </div>
+            </div>
+            <p class="text-1">Xin chào các bạn hôm nay nhóm 6 sẽ hướng dẫn các bạn cách mã hóa và kiểm tra chữ kí số sử
+                dụng thuật toán
+                RSA</p>
+            <button class="btn" onclick="window.location.href='./ui/rsa.html'">Bắt đầu <i class="fas fa-long-arrow-right"></i></button>
+        </div>
+        <div class="img">
+            <div class="spinner-box">
+                <div class="blue-orbit leo"></div>
+                <div class="green-orbit leo"></div>
+                <div class="red-orbit leo"></div>
+                <div class="white-orbit w1 leo"></div>
+                <div class="white-orbit w2 leo"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
